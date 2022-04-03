@@ -24,7 +24,7 @@
           <a class="nav-link active" aria-current="page" href="{{route('ver-alumnos')}}">Registro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('Contactos')}}">Alumnos</a>
+          <a class="nav-link" href="{{route('lista_alumns')}}">Alumnos</a>
         </li>
         </li>
       </ul>

@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string('Nombre');
             $table->string('Apellido_Paterno');
             $table->string('Apellido_Materno');
-            $table->datetime('Fecha_Nacimiento');
+            $table->date('Fecha_Nacimiento');
             $table->string('Carrera');
+            $table->string('foto');
             $table->timestamps();
         });
     }

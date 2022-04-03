@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alumno;
+use Illuminate\Support\Facades\Log;
 
 class AlumnosControllers extends Controller
 {
@@ -13,6 +14,16 @@ class AlumnosControllers extends Controller
             //'Alumnos'=>'required|min:5'
         //]);
         $alumno=new Alumno();
+        $alumno->foto='';
+        Log::info('evaluando foto');
+        Log::info($request->all());
+        //if ($request->hasFile('Foto')) {
+            $file = $request->file('Foto_alumno');
+            $path = $file->store('public');
+           // $path = $file->path();
+            $alumno->foto=$path;
+        //}else{dd("no se subio");}
+        
         $alumno->Matricula=$request->Matricula;
         $alumno->Nombre=$request->Nombre;
         $alumno->Apellido_Paterno=$request->ApellidoPaterno;
