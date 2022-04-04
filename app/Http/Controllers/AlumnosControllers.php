@@ -44,20 +44,26 @@ class AlumnosControllers extends Controller
         return view('show',['Alumnos'=>$Alumnos]);
     }
     public function update(Request $request, $id){
+        
+        //Log::info($id);
         $modificarAlumno=Alumno::find($id);
+        $file = $request->file('Foto_alumno');
+        $path = $file->store('public');
+       // $path = $file->path();
+       $modificarAlumno->foto=$path;
         $modificarAlumno->Matricula=$request->Matricula;
         $modificarAlumno->Nombre=$request->Nombre;
-        $modificarAlumno->ApellidoPaterno=$request->ApellidoPaterno;
-        $modificarAlumno->ApellidoMaterno=$request->ApellidoMaterno;
-        $modificarAlumno->FechaNacimiento=$request->FechaNacimiento;
+        $modificarAlumno->Apellido_Paterno=$request->ApellidoPaterno;
+        $modificarAlumno->Apellido_Materno=$request->ApellidoMaterno;
+        $modificarAlumno->Fecha_Nacimiento=$request->FechaNacimiento;
         $modificarAlumno->Carrera=$request->Carrera;
         $modificarAlumno->save();
-        return redirect()->route('Alumnos')->with('success',"Alumno actualizado");
+        return redirect()->route('lista_alumns')->with('success',"Alumno actualizado");
     }
     public function destroy($id){
         $eliminarAlumno=Alumno::find($id);
         $eliminarAlumno->delete();
-        return redirect()->route('Alumnos')->with('success',"Alumno eliminado");
+        return redirect()->route('lista_alumns')->with('success',"Alumno eliminado");
 
     }
 }

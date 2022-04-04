@@ -26,6 +26,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{route('lista_alumns')}}">Alumnos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('Contactos')}}">Conacto</a>
+        </li>
         </li>
       </ul>
     </div>

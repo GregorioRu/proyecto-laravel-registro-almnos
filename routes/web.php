@@ -31,6 +31,8 @@ Route::get('/alumnos', function () {
     return view('lista_alumns', ['alumnos' => $listaAlumns]);
 })->name('lista_alumns');
 
+
+
 Route::post('/index', [AlumnosControllers::class,'store'])->name('Alumnos');
 Route::get('/index',[AlumnosControllers::class,'index'])->name('ver-alumnos');
 

@@ -1,7 +1,7 @@
 @extends('Saludos')
 @section('Content')
 
-<div class="container w-25 border p-4 mt-4"> 
+<div class="container w-25 border p-4 mt-4 "> 
 <form action="{{route('Alumnos')}}" method="POST" accept-charset="UTF-8"  enctype="multipart/form-data">   
   @csrf
   @if(session('success'))
