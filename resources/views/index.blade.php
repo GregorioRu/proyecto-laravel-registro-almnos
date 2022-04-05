@@ -1,7 +1,7 @@
 @extends('Saludos')
 @section('Content')
 
-<div class="container w-25 border p-4 mt-4 "> 
+<div class="container w-25 border p-4 mt-4 bg-success p-2 text-dark bg-opacity-25"> 
 <form action="{{route('Alumnos')}}" method="POST" accept-charset="UTF-8"  enctype="multipart/form-data">   
   @csrf
   @if(session('success'))
@@ -11,7 +11,7 @@
   <h6 class="alert alert-danger">{{$message}}</h6>
   @enderror
 
-  <div class="mb-3">
+  <div class="mb-3 fw-bold">
     <label for="Matricula" class="form-label">Matricula:</label>
     <input type="int" class="form-control" name="Matricula" aria-describedby="emailHelp">
 
@@ -36,7 +36,7 @@
 
   </div>
   
-  <button type="submit" class="btn btn-success d-grid gap-2 col-6 mx-auto" >Agregar Alumno</button>
+  <button type="submit" class="btn btn-success d-grid gap-2 col-6 mx-auto fw-bold" >Agregar Alumno</button>
 
   </form>
 

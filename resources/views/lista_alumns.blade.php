@@ -3,7 +3,7 @@
 <h1 class= "text-center">Tabla de Registros</h1>
 <div class="container w-50  p-4 mt-10 text-center">
 <div class="row row-cols-1 row-cols-md-3 g-4">
-<table class="table table-striped table-hover mt-4">
+<table class="table table-striped table-hover bg-success p-2 text-dark bg-opacity-10 mt-4">
  
   <head>
     <tr>

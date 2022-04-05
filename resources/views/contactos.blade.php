@@ -5,5 +5,6 @@
     <h3>Esta aplicación fue diseñada por estudiantes de la Univercidad Tecnologica de la Sierra Hidalguense</h3>
     <h4>8IDGS</h4>
     <h4>Enero-Abril 2022</h4>
+    <img src="https://utsh.edu.mx/wp-content/uploads/2021/01/1.png" width="200px"></img>
 </div>
 @endsection
