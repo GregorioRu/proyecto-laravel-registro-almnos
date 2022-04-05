@@ -27,7 +27,7 @@
     
    
     <label for="FechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
-    <input type="date" class="form-control" name="FechaNacimiento" value="{{\Carbon\Carbon::parse($Alumnos->Fecha_Nacimieto)->format('Y-m-d')}}" >
+    <input type="date" class="form-control" name="FechaNacimiento" value="{{$Alumnos->Fecha_Nacimiento}}" >
 
     <label for="Carrera" class="form-label">Carrera:</label>
     <input type="text" class="form-control" name="Carrera" value="{{$Alumnos->Carrera}}">

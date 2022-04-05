@@ -47,10 +47,13 @@ class AlumnosControllers extends Controller
         
         //Log::info($id);
         $modificarAlumno=Alumno::find($id);
-        $file = $request->file('Foto_alumno');
-        $path = $file->store('public');
-       // $path = $file->path();
-       $modificarAlumno->foto=$path;
+        if ($request->hasFile('Foto')){
+            $file = $request->file('Foto_alumno');
+            $path = $file->store('public');
+           // $path = $file->path();
+           $modificarAlumno->foto=$path;
+        }
+       
         $modificarAlumno->Matricula=$request->Matricula;
         $modificarAlumno->Nombre=$request->Nombre;
         $modificarAlumno->Apellido_Paterno=$request->ApellidoPaterno;
